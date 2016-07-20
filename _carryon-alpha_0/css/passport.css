@@ -28,10 +28,10 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-@-moz-viewport { width: device-width; }
-@-ms-viewport { width: device-width; }
 @-webkit-viewport { width: device-width; }
-@viewport { width: device-width; }
+   @-moz-viewport { width: device-width; }
+    @-ms-viewport { width: device-width; }
+        @viewport { width: device-width; }
 
 /* Sections
    ========================================================================== */
@@ -186,31 +186,11 @@ svg:not(:root) {
 /* Forms
    ========================================================================== */
 
-fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
 
-legend {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%; 
-  margin-bottom: 1rem;
-  padding: 0;
-  white-space: normal;
-  display: block;
-  border: 0;
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
 
-label {
-  display: inline-block;
-  margin-bottom: 1rem;
-}
+
+
+
 
 button,
 input,
@@ -334,6 +314,7 @@ button:-moz-focusring,
           box-sizing: content-box;
 }
 
+
 input[type="text"],
 input[type="email"],
 input[type="search"],
@@ -351,6 +332,7 @@ input[type="password"] {
   -webkit-appearance: button;
   font: inherit;
 }
+
 
 textarea::-webkit-selection,
 input::-webkit-selection {

@@ -1,0 +1,23 @@
+
+fieldset {
+  min-width: 0;
+  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+
+legend {
+  box-sizing: border-box;
+  width: auto;
+  padding: 1rem;
+  white-space: normal;
+  display: block;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
