@@ -183,11 +183,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Forms
+/* Forms  /*%^%*^@$*&*%^(@$)*
    ========================================================================== */
-
-@import url(forms.css);
-
 a,
 area,
 summary {
