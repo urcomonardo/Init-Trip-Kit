@@ -54,6 +54,29 @@ input[type="reset"] {
   font: inherit;
 }
 
+  /* Button TEST Centrado vertical y aplicacion de fondo.
+  **************************************************************/
+  /*
+    button.tall,
+    [role="button"].tall,
+    html input[type="button"].tall,
+    input[type="submit"].tall,
+    input[type="reset"].tall,
+    input[type="button"] .tall {
+      height: 100px;
+      width: 300px;
+    }
+
+    button.red,
+    [role="button"].red,
+    html input[type="button"].red,
+    input[type="submit"].red,
+    input[type="reset"].red,
+    input[type="button"].red{
+      background: red;
+    }
+  */
+
 button::-moz-focus-inner,
 input::-moz-focus-inner, 
 [type="button"]::-moz-focus-inner,
@@ -62,7 +85,7 @@ input::-moz-focus-inner,
   border:none;
 }
 
-[disabled] {
+button[disabled] {
   cursor:not-allowed;
 }
 
@@ -186,6 +209,11 @@ textarea {
   border: thin solid gainsboro;
 }
 
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 output {
   display: inline-block;
   font: inherit;
@@ -198,12 +226,21 @@ output {
 }
 
 /*selections */
+
 textarea::-webkit-selection,
-   textarea::-moz-selection,
-        textarea::selection,
-input::-webkit-selection,
-   input::-moz-selection,
-        input::selection {
+input::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::selection,
+input::selection {
   background-color: rgba(100, 100, 100, 0.4);
   color: rgba(0, 0, 0, 0.87);
 }
