@@ -1,9 +1,8 @@
-
 fieldset {
   min-width: 0;
   padding: 0 1rem 1rem 1rem;
   margin-bottom: 1rem;
-  border: 1px solid black;
+  border: thin solid gainsboro;
 }
 
 legend {
@@ -23,6 +22,71 @@ label {
 }
 
 
+/* Buttons. A button is a module
+   ========================================================================== */
+button,
+[role="button"],
+html input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+       -ms-appearance:none;
+  display: inline-block;
+  margin: 0;
+  padding: .5rem 1rem;
+  border: thin solid transparent;
+  border-radius: 0; 
+  background: gainsboro;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+}
 
+/* Inputs
+   ========================================================================== */
 
+input {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  display: inline-block; 
+}
 
+[type='text'],
+[type='email'],
+[type='password'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='search'],
+[type='datetime'],
+[type='datetime-local'],
+[type='date'],
+[type='time'],
+[type='week'],
+[type='month']{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+  margin: 0;
+  padding: .5rem;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+}

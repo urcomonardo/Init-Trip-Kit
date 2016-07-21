@@ -46,6 +46,7 @@ body {
   line-height: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
 }
 
 article,

@@ -1,5 +1,4 @@
-button,
-input,
+
 optgroup,
 select,
 textarea {
@@ -25,23 +24,10 @@ optgroup {
   font-weight: bold;
 }
 
-select,
-button { 
+select { 
   text-transform: none;
 }
 
-input {
-  line-height: normal;
-}
-
-button,
-input {
-  overflow: visible;
-}
-
-button,
-[role="button"],
-input,
 label,
 select,
 textarea {
@@ -49,37 +35,17 @@ textarea {
       touch-action: manipulation;
 }
 
-[role="button"] {
-  cursor: pointer;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; 
-}
-
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  line-height: 1;
-}
 
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  cursor:not-allowed;
 }
 
 /* Remove the inner border and padding in Firefox. */
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
+
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner, 
@@ -98,12 +64,7 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 0;
-}
+
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
