@@ -17,47 +17,98 @@ legend {
 }
 
 label {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-
-/* Buttons. A button is a module
+/* BUTTON Module
    ========================================================================== */
 button,
 [role="button"],
 html input[type="button"],
+     input[type="button"],
 input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type="reset"] {
+  cursor: pointer;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-appearance: none;
      -moz-appearance: none;
        -ms-appearance:none;
-  display: inline-block;
+  display:table-cell;
+  vertical-align:middle;
+  overflow: visible;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
   margin: 0;
   padding: .5rem 1rem;
   border: thin solid transparent;
-  border-radius: 0; 
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
   background: gainsboro;
-  overflow: visible;
   color: inherit;
   font: inherit;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  text-transform: none;
-  cursor: pointer;
 }
 
-/* Inputs
+  /* Button TEST Centrado vertical y aplicacion de fondo.
+  **************************************************************/
+  /*
+    button.tall,
+    [role="button"].tall,
+    html input[type="button"].tall,
+    input[type="submit"].tall,
+    input[type="reset"].tall,
+    input[type="button"] .tall {
+      height: 100px;
+      width: 300px;
+    }
+
+    button.red,
+    [role="button"].red,
+    html input[type="button"].red,
+    input[type="submit"].red,
+    input[type="reset"].red,
+    input[type="button"].red{
+      background: red;
+    }
+  */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner, 
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border:none;
+}
+
+button[disabled] {
+  cursor:not-allowed;
+}
+
+/* Input
    ========================================================================== */
 
-input {
+input,
+html input {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  display: inline-block; 
+  display: inline-block;
+  box-shadow: none;
+}
+
+input[list] {
+    margin: 0;
+  padding: .5rem;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  outline: 0;
 }
 
 [type='text'],
@@ -72,9 +123,10 @@ input {
 [type='date'],
 [type='time'],
 [type='week'],
-[type='month']{
+[type='month'] {
   -webkit-appearance: none;
      -moz-appearance: none;
+      -ms-appearance: none;
   margin: 0;
   padding: .5rem;
   border: thin solid gainsboro;
@@ -82,11 +134,111 @@ input {
   color: inherit;
   font: inherit;
   overflow: visible;
+  outline: 0;
+}
+
+[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin:0;
+  height:0;
+}
+
+/* Select
+   ========================================================================== */
+select {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  margin: 0;
+  padding: .5rem;
+  outline: none;
+  width: 100%;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  text-transform: none;
+  color: inherit;
+  font: inherit;
+}
+
+optgroup {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  font-weight: bold;
+}
+
+option {
+  color: inherit;
+  font: normal;
+}
+
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
+    -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  height: auto;
+  min-height: 50px;
+  overflow: auto;
+  resize: vertical;
+  border: thin solid gainsboro;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+output {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/*selections */
+
+textarea::-webkit-selection,
+input::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::selection,
+input::selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
 }
