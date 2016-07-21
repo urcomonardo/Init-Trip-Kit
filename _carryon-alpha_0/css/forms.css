@@ -101,7 +101,7 @@ html input {
 }
 
 input[list] {
-    margin: 0;
+  margin: 0;
   padding: .5rem;
   border: thin solid gainsboro;
   border-radius: 0;
@@ -129,6 +129,7 @@ input[list] {
       -ms-appearance: none;
   margin: 0;
   padding: .5rem;
+  background: transparent;
   border: thin solid gainsboro;
   border-radius: 0;
   color: inherit;
@@ -172,6 +173,7 @@ select {
   padding: .5rem;
   outline: none;
   width: 100%;
+  background: transparent;
   border: thin solid gainsboro;
   border-radius: 0;
   text-transform: none;
