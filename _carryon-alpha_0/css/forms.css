@@ -20,8 +20,6 @@ label {
   margin-bottom: 1rem;
 }
 
-/* Button
-   ========================================================================== */
 button,
 [role="button"],
 html input[type="button"],
@@ -57,12 +55,6 @@ input::-moz-focus-inner,
   border:none;
 }
 
-button[disabled] {
-  cursor:not-allowed;
-}
-
-/* Input
-   ========================================================================== */
 input,
 html input {
   display: inline-block;
@@ -139,14 +131,13 @@ textarea {
   margin: 0;
   line-height: inherit;
   border-radius: 0;
+  outline: none;
   height: auto;
   min-height: 50px;
   overflow: auto;
   resize: vertical;
   border: thin solid gainsboro;
 }
-
-/*selections */
 
 textarea::-webkit-selection,
 input::-webkit-selection,
@@ -158,8 +149,6 @@ input::selection {
   color: dimgray;
 }
 
-/* Select
-   ========================================================================== */
 select {
   margin: 0;
   padding: .5rem;
@@ -195,6 +184,10 @@ output {
   display: inline-block;
   font: inherit;
   color: inherit;
+}
+
+[disabled] {
+  cursor:not-allowed;
 }
 
 ::-webkit-file-upload-button {

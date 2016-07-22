@@ -1,16 +1,7 @@
-/*! Passport. 
-Basado en: normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
-          box-sizing: inherit;
-}
+@-webkit-viewport { width: device-width; }
+   @-moz-viewport { width: device-width; }
+    @-ms-viewport { width: device-width; }
+        @viewport { width: device-width; }
 
 html {
   color: black;
@@ -26,13 +17,15 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-@-webkit-viewport { width: device-width; }
-   @-moz-viewport { width: device-width; }
-    @-ms-viewport { width: device-width; }
-        @viewport { width: device-width; }
-
-/* Sections
-   ========================================================================== */
+/*
+Todos los elementos del documento heredaran la regla box-sizing. */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -60,17 +53,27 @@ summary {
   display: block;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 a {
   outline: none;
   background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -84,12 +87,6 @@ b, strong { font-weight: bolder; }
 small {
   font-size: 80%;
   font-weight: normal;
-}
-
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
 }
 
 sub,
@@ -120,8 +117,27 @@ mark {
   padding: .2em;
 }
 
-/* Embedded content
-   ========================================================================== */
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
 
 audio,
 canvas,
@@ -136,38 +152,10 @@ audio:not([controls]) {
   height: 0;
 }
 
-img {
-  -ms-interpolation-mode: bicubic;
-  max-width: 100%;
-  height: auto;
-  border: none;
-  vertical-align: middle;
-}
-
-figure {
-  margin: 0 0 1.5rem;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Tables
-   ========================================================================== */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
   background-color: transparent;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-th {
-  text-align: left;
 }
 
 caption {
@@ -178,8 +166,14 @@ caption {
   caption-side: bottom;
 }
 
-/* Lists
-   ========================================================================== */
+td,
+th {
+  padding: 0;
+}
+
+th {
+  text-align: left;
+}
 
 ol,
 ul,
@@ -204,9 +198,6 @@ dd {
   margin-left: 0;
 }
 
-/* MISC
-   ========================================================================== */
-
 hr {
   display: block;
   -moz-box-sizing: content-box;
@@ -220,6 +211,203 @@ hr {
   border-top: 1px solid gainsboro;
 }
 
+fieldset {
+  min-width: 0;
+  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 1rem;
+  border: thin solid gainsboro;
+}
+
+legend {
+  box-sizing: border-box;
+  width: auto;
+  padding: 1rem;
+  white-space: normal;
+  display: block;
+  color: inherit;
+  font:inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+button,
+[role="button"],
+html input[type="button"],
+     input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+       -ms-appearance:none;
+  display:table-cell;
+  overflow: visible;
+  vertical-align:middle;
+  margin: 0;
+  padding: .5rem 1rem;
+  background: gainsboro;
+  border: thin solid transparent;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  color: inherit;
+  font: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner, 
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border:none;
+}
+
+input,
+html input {
+  display: inline-block;
+  box-shadow: none;
+}
+
+[type='text'],
+[type='email'],
+[type='password'],
+[type='url'],
+[type='number'],
+[type='tel'],
+[type='search'],
+[type='datetime'],
+[type='datetime-local'],
+[type='date'],
+[type='time'],
+[type='week'],
+[type='month'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+  margin: 0;
+  padding: .5rem;
+  background: transparent;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  outline: 0;
+}
+
+[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin:0;
+  height:0;
+}
+
+input[list] {
+  margin: 0;
+  padding: .5rem;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  outline: none;
+}
+
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  line-height: inherit;
+  border-radius: 0;
+  height: auto;
+  min-height: 50px;
+  overflow: auto;
+  resize: vertical;
+  border: thin solid gainsboro;
+}
+
+textarea::-webkit-selection,
+input::-webkit-selection,
+textarea::-moz-selection,
+input::-moz-selection,
+textarea::selection,
+input::selection {
+  background-color: gainsboro;
+  color: dimgray;
+}
+
+select {
+  margin: 0;
+  padding: .5rem;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  text-transform: none;
+  color: inherit;
+  font: inherit;
+}
+
+optgroup {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border: none;
+  font-weight: bold;
+}
+
+option {
+  color: inherit;
+  font: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+output {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+[disabled] {
+  cursor:not-allowed;
+}
+
 [hidden],
 template {
   display: none;
@@ -227,17 +415,4 @@ template {
 
 [tabindex="-1"]:focus {
   outline: none !important;
-}
-
-a,
-area,
-button,
-[role="button"],
-input,
-label,
-select,
-summary,
-textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
 }
