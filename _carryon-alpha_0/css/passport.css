@@ -346,7 +346,7 @@ textarea {
   line-height: inherit;
   border-radius: 0;
   height: auto;
-  min-height: 50px;
+  min-height: 3rem;
   overflow: auto;
   resize: vertical;
   border: thin solid gainsboro;
@@ -366,7 +366,7 @@ select {
   margin: 0;
   padding: .5rem;
   outline: none;
-  width: 100%;
+  width: auto;
   background: transparent;
   border: thin solid gainsboro;
   border-radius: 0;
