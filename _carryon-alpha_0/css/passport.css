@@ -41,8 +41,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  color: inherit;
-  font: inherit;
   font-size: 1.5rem;
 }
 
@@ -68,22 +66,12 @@ summary {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font: inherit;
-  color: inherit;
 }
 
 a {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  -webkit-text-decoration-skip: objects;
   outline: none;
   background-color: transparent;
-  color: deeppink;
 }
-
-a:active,
-a:hover,
-a:focus {}
 
 p {
   margin-top: 0;
@@ -118,7 +106,6 @@ sup { top: -0.5em; }
 abbr[title],
 abbr[data-original-title]  {
   border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
   cursor: help;
 }
@@ -150,17 +137,11 @@ audio:not([controls]) {
 }
 
 img {
+  -ms-interpolation-mode: bicubic;
   max-width: 100%;
   height: auto;
-  -ms-interpolation-mode: bicubic;
-  border: 0;
   border: none;
   vertical-align: middle;
-}
-
-area {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
 }
 
 figure {
@@ -192,7 +173,7 @@ th {
 caption {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  color: #818a91;
+  font-weight: bold;
   text-align: left;
   caption-side: bottom;
 }
@@ -230,18 +211,13 @@ hr {
   display: block;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  height: 0;
+  overflow: visible;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border: 0;
   padding: 0;
-  border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-summary {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  border-top: 1px solid gainsboro;
 }
 
 [hidden],
@@ -251,4 +227,17 @@ template {
 
 [tabindex="-1"]:focus {
   outline: none !important;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }

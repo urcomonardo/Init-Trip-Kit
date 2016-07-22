@@ -12,18 +12,15 @@ legend {
   white-space: normal;
   display: block;
   color: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font:inherit;
 }
 
 label {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-/* BUTTON Module
+/* Button
    ========================================================================== */
 button,
 [role="button"],
@@ -32,50 +29,25 @@ html input[type="button"],
 input[type="submit"],
 input[type="reset"] {
   cursor: pointer;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   -webkit-appearance: none;
      -moz-appearance: none;
        -ms-appearance:none;
   display:table-cell;
-  vertical-align:middle;
   overflow: visible;
+  vertical-align:middle;
+  margin: 0;
+  padding: .5rem 1rem;
+  background: gainsboro;
+  border: thin solid transparent;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
   text-align: center;
   text-decoration: none;
   text-transform: none;
-  margin: 0;
-  padding: .5rem 1rem;
-  border: thin solid transparent;
-  outline: none;
-  box-shadow: none;
-  border-radius: 0;
-  background: gainsboro;
   color: inherit;
   font: inherit;
 }
-
-  /* Button TEST Centrado vertical y aplicacion de fondo.
-  **************************************************************/
-  /*
-    button.tall,
-    [role="button"].tall,
-    html input[type="button"].tall,
-    input[type="submit"].tall,
-    input[type="reset"].tall,
-    input[type="button"] .tall {
-      height: 100px;
-      width: 300px;
-    }
-
-    button.red,
-    [role="button"].red,
-    html input[type="button"].red,
-    input[type="submit"].red,
-    input[type="reset"].red,
-    input[type="button"].red{
-      background: red;
-    }
-  */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner, 
@@ -91,24 +63,10 @@ button[disabled] {
 
 /* Input
    ========================================================================== */
-
 input,
 html input {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   display: inline-block;
   box-shadow: none;
-}
-
-input[list] {
-  margin: 0;
-  padding: .5rem;
-  border: thin solid gainsboro;
-  border-radius: 0;
-  color: inherit;
-  font: inherit;
-  overflow: visible;
-  outline: 0;
 }
 
 [type='text'],
@@ -164,11 +122,45 @@ input[list] {
   height:0;
 }
 
+input[list] {
+  margin: 0;
+  padding: .5rem;
+  border: thin solid gainsboro;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  overflow: visible;
+  outline: 0;
+}
+
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
+  height: auto;
+  min-height: 50px;
+  overflow: auto;
+  resize: vertical;
+  border: thin solid gainsboro;
+}
+
+/*selections */
+
+textarea::-webkit-selection,
+input::-webkit-selection,
+textarea::-moz-selection,
+input::-moz-selection,
+textarea::selection,
+input::selection {
+  background-color: gainsboro;
+  color: dimgray;
+}
+
 /* Select
    ========================================================================== */
 select {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   margin: 0;
   padding: .5rem;
   outline: none;
@@ -194,21 +186,6 @@ option {
   font: normal;
 }
 
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  line-height: inherit;
-  border-radius: 0;
-    -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  height: auto;
-  min-height: 50px;
-  overflow: auto;
-  resize: vertical;
-  border: thin solid gainsboro;
-}
-
 progress {
   display: inline-block;
   vertical-align: baseline;
@@ -223,24 +200,4 @@ output {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
-
-/*selections */
-
-textarea::-webkit-selection,
-input::-webkit-selection {
-  background-color: rgba(100, 100, 100, 0.4);
-  color: rgba(0, 0, 0, 0.87);
-}
-
-textarea::-moz-selection,
-input::-moz-selection {
-  background-color: rgba(100, 100, 100, 0.4);
-  color: rgba(0, 0, 0, 0.87);
-}
-
-textarea::selection,
-input::selection {
-  background-color: rgba(100, 100, 100, 0.4);
-  color: rgba(0, 0, 0, 0.87);
 }

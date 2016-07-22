@@ -1,0 +1,7 @@
+a {
+  color: deeppink;
+}
+
+a:active,
+a:hover,
+a:focus {}
